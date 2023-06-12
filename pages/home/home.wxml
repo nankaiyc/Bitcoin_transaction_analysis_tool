@@ -1,0 +1,17 @@
+<view class="container">
+  <menu class="menu"/>
+  <view class="header">
+    <!-- 主页内容 -->
+    <text class="title">比特币交易分析工具</text>
+    <view class="description">
+      <text>
+        比特币（Bitcoin）是一种去中心化的数字货币，通过区块链技术实现安全的交易和资产存储。
+        它具有匿名性、快速、低成本和无国界等特点，成为全球范围内广泛使用的加密货币。
+        欢迎使用比特币交易分析工具，探索比特币网络的交易和区块信息，以及统计和可视化数据分析。
+      </text>
+      <!-- 添加其他相关介绍信息 -->
+    </view>
+  </view>
+  
+
+</view>

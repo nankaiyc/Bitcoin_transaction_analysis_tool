@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="input-container">
+    <text class="label1">比特币地址：</text>
+    <input class="input" placeholder="请输入比特币地址" bindinput="onAddressInput" />
+  </view>
+  <view class="input-container">
+    <text class="label2">标记信息：</text>
+    <textarea class="textarea" placeholder="请输入标记信息" bindinput="onTagInput"></textarea>
+  </view>
+  <view class="btn-container">
+    <button class="btn" bindtap="onSubmit">提交标记</button>
+  </view>
+</view>

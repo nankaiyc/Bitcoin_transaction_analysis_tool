@@ -1,0 +1,39 @@
+<!-- pages/transaction/query.wxml -->
+<!-- pages/transaction/query.wxml -->
+<view class="container">
+  <view class="title">交易查询</view>
+  <view class="search-bar">
+    <input class="input" type="text" placeholder="请输入交易哈希值" bindinput="onSearchInput" />
+    <button class="btn-search" bindtap="onSearch">查询</button>
+  </view>
+  <view class="transaction-list">
+    <block wx:for="{{ transactions }}" wx:key="hash">
+      <view class="transaction-item">
+        <view class="item-label">交易哈希：</view>
+        <view class="item-value">{{ item.hash }}</view>
+      </view>
+      <view class="transaction-item">
+        <view class="item-label">交易时间：</view>
+        <view class="item-value">{{ item.time }}</view>
+      </view>
+      <view class="transaction-item">
+        <view class="item-label">输入地址：</view>
+        <view class="item-value">{{ item.input_address }}</view>
+      </view>
+	  <view class="transaction-item" wx:for="{{item.output_address}}" wx:for-item="index" wx:key="index">
+        <view class="item-label">输出地址 {{index + 1}}：</view>
+        <view class="item-value">{{ item.output_address[index] }}</view>
+      </view>
+      <view class="transaction-item">
+        <view class="item-label">比特币数量：</view>
+        <view class="item-value">{{ item.bit_num }}</view>
+      </view>
+      <view class="transaction-item">
+        <view class="item-label">交易字节数：</view>
+        <view class="item-value">{{ item.size }}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+

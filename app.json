@@ -1,0 +1,19 @@
+{
+  "pages":[
+	"pages/home/home",
+	"pages/Transaction_Query/Transaction_Query",
+	"pages/Block_Query/Block_Query",
+	"pages/Address_Query/Address_Query",
+	"pages/Transaction_Statistics/Transaction_Statistics",
+	"pages/Address mark/Address mark",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

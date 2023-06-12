@@ -1,0 +1,56 @@
+.container {
+	padding: 20px;
+  }
+  
+  .input-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+  }
+  
+  .label1 {
+	/* width: 120px; */
+	margin-left: -30rpx;
+	font-size: 16px;
+	color: #333;
+  }
+  
+  .label2 {
+	margin-left: 100rpx;
+	font-size: 16px;
+	color: #333;
+  }
+
+  .input {
+	flex: 1;
+	height: 30px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+  }
+  
+  .textarea {
+	flex: 1;
+	min-height: 80px;
+	max-height: 200px; /* 设置最大高度限制 */
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: vertical;
+	overflow-y: auto; /* 添加垂直滚动条 */
+  }
+  
+  .btn-container {
+	text-align: center;
+	margin-top: 20px; /* 添加顶部间距 */
+  }
+  
+  .btn {
+	display: inline-block;
+	padding: 10px 20px;
+	font-size: 16px;
+	color: #fff;
+	background-color: #007aff;
+	border-radius: 4px;
+  }
+  

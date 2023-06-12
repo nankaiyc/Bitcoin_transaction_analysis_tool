@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="section">
+    <text class="label">交易量数据: </text>
+    <view class="value">{{ transactionVolumeData }}</view>
+  </view>
+  <view class="section">
+    <text class="label">平均交易费用: </text>
+    <view class="value">{{ averageTransactionFee }}</view>
+  </view>
+  <view class="section">
+    <text class="label">未确认交易数量: </text>
+    <view class="value">{{ unconfirmedTransactionCount }}</view>
+  </view>
+  <view class="section">
+    <text class="label">交易时间分布数据: </text>
+    <image class="flow-chart" src="{{ transactionHeatmapData }}"></image>
+  </view>
+  <view class="section">
+    <text class="label">交易热度地图数据: </text>
+    <image class="flow-chart" src="{{ addressGraphData }}"></image>
+  </view>
+  <view class="section">
+    <text class="label">地址关联图数据: </text>
+    <image class="flow-chart" src="{{ flowChartUrl2 }}"></image>
+  </view>
+</view>
+

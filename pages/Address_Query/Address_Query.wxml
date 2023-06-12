@@ -1,0 +1,30 @@
+<!-- pages/addressQuery/addressQuery.wxml -->
+
+<view class="container">
+  <view class="input-container">
+    <text class="label">请输入比特币地址：</text>
+    <input class="input" placeholder="比特币地址" bindinput="onAddressInput" />
+  </view>
+  <button class="button" bindtap="onQueryButtonClick">查询</button>
+
+  <view class="result-container">
+    <view class="result-label">交易历史记录：</view>
+    <view wx:if="{{ transactions.length === 0 }}">暂无记录</view>
+    <view wx:else>
+      <block wx:for="{{ transactions }}" wx:key="index">
+        <view class="result-item">{{ item.hash }}</view>
+      </block>
+    </view>
+  </view>
+
+  <view class="result-container">
+    <view class="result-label">余额：</view>
+    <view>当前地址余额：{{ balance }} BTC</view>
+  </view>
+
+  <view class="result-container">
+    <view class="result-label">比特币流动图：</view>
+    <image class="flow-chart" src="{{ flowChartUrl }}"></image>
+  </view>
+</view>
+

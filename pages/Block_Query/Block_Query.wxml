@@ -1,0 +1,59 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="form">
+    <text class="form-title">请选择查询方式：</text>
+    <radio-group class="radio-group" bindchange="onQueryTypeChange">
+      <label class="radio-label">
+        <radio class="radio" value="hash" checked="{{queryType === 'hash'}}"></radio>
+        <text class="radio-text">区块哈希</text>
+      </label>
+      <label class="radio-label">
+        <radio class="radio" value="height" checked="{{queryType === 'height'}}"></radio>
+        <text class="radio-text">区块高度</text>
+      </label>
+      <label class="radio-label">
+        <radio class="radio" value="timestamp" checked="{{queryType === 'timestamp'}}"></radio>
+        <text class="radio-text">时间戳</text>
+      </label>
+    </radio-group>
+  </view>
+
+  <view class="form">
+    <text class="form-title">请输入查询信息：</text>
+    <view class="input-group" wx:if="{{queryType === 'hash'}}">
+      <text class="input-label">区块哈希：</text>
+      <input class="input-field" type="text" bindinput="onBlockHashInput" value="{{inputBlockHash}}" />
+    </view>
+    <view class="input-group" wx:if="{{queryType === 'height'}}">
+      <text class="input-label">区块高度：</text>
+      <input class="input-field" type="text" bindinput="onBlockHeightInput" value="{{inputBlockHeight}}" />
+    </view>
+    <view class="input-group" wx:if="{{queryType === 'timestamp'}}">
+      <text class="input-label">时间戳：</text>
+      <input class="input-field" type="text" bindinput="onTimestampInput" value="{{inputTimestamp}}" />
+    </view>
+  </view>
+
+  <view class="button-group">
+    <button class="query-button" bindtap="onQueryButtonClick">查询</button>
+  </view>
+
+  <view class="result" wx:if="{{blockInfo}}">
+    <text class="info-label">区块信息：</text>
+    	<view class="info-value">哈希：{{blockInfo.hash}}</view>
+    	<view class="info-value">版本号：{{blockInfo.ver}}</view>
+    	<view class="info-value">前一区块哈希：{{blockInfo.prev_block}}</view>
+    	<view class="info-value">Merkle根：{{blockInfo.mrkl_root}}</view>
+    	<view class="info-value">时间戳：{{blockInfo.time}}</view>
+    	<view class="info-value">难度目标：{{blockInfo.bits}}</view>
+    	<view class="info-value">交易费用：{{blockInfo.fee}}</view>
+    	<view class="info-value">随机数：{{blockInfo.nonce}}</view>
+    	<view class="info-value">交易数量：{{blockInfo.n_tx}}</view>
+    	<view class="info-value">大小：{{blockInfo.size}}</view>
+    	<view class="info-value">主链：{{blockInfo.main_chain}}</view>
+    	<view class="info-value">高度：{{blockInfo.height}}</view>
+    	<view class="info-value">权重：{{blockInfo.weight}}</view>
+  </view>
+
+  <view class="error" wx:if="{{error}}">{{error}}</view>
+</view>

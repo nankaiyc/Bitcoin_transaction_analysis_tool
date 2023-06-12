@@ -1,0 +1,24 @@
+<!--components/menu/menu.wxml-->
+<view class="left_menu" bindtap="pop_left">
+  <image src="../../resource/gongneng.png" mode="scaleToFill" class="left_menu_img"/>
+</view>
+<!-- 阴影 -->
+
+<view class="yd_overlay  {{show?'yd_show_overlay':'yd_close_overlay'}}" bindtap="close_overlay"></view>
+
+<!-- 左侧栏目 -->
+<view class="left_container  {{show?'yd_left_content':'yd_close_overlay'}}" style="top: {{safeTop}}px;">
+  <view class="left_menu_top">
+    <image src="../../resource/startup_logo.png" mode="widthFix" class="menu_logo"/>
+  </view>
+  <view wx:for="{{itemArray}}" wx:key="index">
+    <view bindtap="jump" data-index="{{index}}" class="menu-item" hover-class="{{(index == 4 || (index < 3 && permArray[index] == 0))?'':'long_pressed'}}">
+      <view class="line" wx:if="{{index == 5}}"/>
+      <view wx:else class="menu-item-content">
+        <image src="{{item.icon}}" mode="scaleToFill" class="menu-item-img"/>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+

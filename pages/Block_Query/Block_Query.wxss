@@ -1,0 +1,88 @@
+/* index.wxss */
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+  }
+  
+  .form {
+	width: 100%;
+	margin-bottom: 20px;
+  }
+  
+  .form-title{
+	  margin-bottom: 100px;
+  }
+
+  .radio-group {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+  }
+  
+  .radio-label {
+	display: flex;
+	align-items: center;
+  }
+  
+  .radio-text {
+	font-size: 14px;
+  }
+  
+  .input-group {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+  }
+  
+  .input-label {
+	width: 80px;
+	font-size: 14px;
+  }
+  
+  .input-field {
+	flex: 1;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+  }
+  
+  .button-group {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+  }
+  
+  .query-button {
+	padding: 8px 16px;
+	background-color: #007aff;
+	color: #fff;
+	border-radius: 4px;
+  }
+  
+  .result {
+	margin-bottom: 20px;
+  }
+  
+  .info-label {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+  }
+  
+  .info-value {
+	font-size: 14px;
+	margin-bottom: 5px;
+	flex: 1;
+	margin-left: 10px;
+	white-space: pre-wrap;
+	word-break: break-all;
+  }
+  
+  .error {
+	color: red;
+	font-size: 14px;
+  }
+  
